@@ -1,0 +1,23 @@
+Springboot Class: Main()
+     Starts execution from this class.
+	 
+@SpringBootApplication:
+  Annaoted the springboot class.
+  It contains internally @Configuration, @EnableAutoConfiguration and @ComponentScan.
+Ex:
+   @SpringBootApplication
+   public class GvpMallCrudApplication implements CommandLineRunner{
+
+   }
+   
+CommandLineRunner(I):
+CommandLineRunner Interface used to indicate that a bean should run when it is contained within a SpringApplication. Based o this, you able to see the output indicate
+Browser.
+   @SpringBootApplication
+   public class GvpMallCrudApplication implements CommandLineRunner{
+   
+     public void run(String... args) throws Exception {
+	 
+	 }
+
+   }

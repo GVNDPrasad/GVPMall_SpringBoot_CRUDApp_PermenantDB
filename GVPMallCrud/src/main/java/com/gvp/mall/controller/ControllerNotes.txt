@@ -1,0 +1,52 @@
+About Controller:
+
+/*
+ * Controller layer useful for Handles Request and Responses
+ * Mediator between UI and DB
+ * Controller Logic
+ */
+
+NOTE:
+@Autowired useful for Dependency Injuction
+Ex: @Autowired
+	private CounterService cs;
+	
+@RestController useful for Hanling Request
+EX: @RestController
+    public class CounterController {
+	}
+
+@RequestMapping(value = "/insert") for handling methods
+EX: @RequestMapping(value = "/insert")
+	public TicketCountersDTO add(@RequestBody TicketCountersDTO counterObj) {
+		return cs.add(counterObj);
+	}
+
+@RequestBody useful for Handling Bean/Domain objects from UI i.e Data object transfers UI to Controller
+Ex:
+public TicketCountersDTO add(@RequestBody TicketCountersDTO counterObj) {
+		return cs.add(counterObj);
+	}
+	
+@PathVariable useful for Handling Bean Param values from UI i.e Data values transfers UI to Controller
+Ex:
+public String update(@PathVariable("counterNo") int counterNo,@PathVariable("counterType") String counterType) {
+		return counterNo;
+	}
+	
+
+HTTP verbs for CRUD Operations,
+
+ 1) @PostMapping = URL:localhost:8080/counterController/insert
+    //Inserting the values using @PostMapping
+	
+ 2)@GetMapping =  //URL:localhost:8080/counterController/getAll
+    //Getting single record and multiple records
+	
+ 3)PutMapping = //URL:localhost:8080/counterController/update/{counterNo}/{counterType}
+   //Updating the record
+   
+ 4)@DeleteMapping:
+   //Deleting single record and Multiple records.
+
+

@@ -1,0 +1,31 @@
+DTO/Domain/Bean Layer:
+  Connection b/w DTO and Database
+  It contains POJO class and Spring Bean Class and ORM class
+
+@Entity:
+   It's help for to create automatically in Database(Internally using JPA & Hibernate)
+EX: public class TicketCountersDTO {
+
+    }
+	
+@Table:
+    If you need to change table name it will change. But, If you don't use this one it will take Table name is class name.
+Ex: @Table(name="ticket")
+   public class TicketCountersDTO {
+      @Column(name="counter_type")
+	  private String counterType;
+   }
+   
+@Coloumn:
+   If you need to change column name it will change. But, If you don't use this one it will take column name is class property name.
+Ex: public class TicketCountersDTO {
+      @Column(name="counter_type")
+	  private String counterType;
+    }
+	
+@Id:
+   It's useful for to create the primary key/Id for Table.
+   
+@GeneratedValue(strategy = GenerationType.AUTO):
+   It decides primary value is Random No/Serial No
+   

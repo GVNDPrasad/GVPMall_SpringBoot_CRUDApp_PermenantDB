@@ -1,0 +1,21 @@
+Service Layer:
+
+/*
+ * Service layer contains Business logic means Primary Logic(Coding) & Secondary Logic(Middle-ware Services)
+ */
+ 
+@Service denoted by Service Class
+ Ex:@Service
+    public class CounterService {
+	
+	}
+ 
+@Autowired useful for Dependency Injuction
+Ex: @Autowired
+	private CounterDAO cd;
+	
+Iterable is parent class for colletion. If you use return type is iterable, no need to bother about mismatch data.Able to understand any language
+i.e Java to Angular or Java to React
+Ex: public Iterable<TicketCountersDTO> getAllTickets(){
+		return cid.findAll();
+	}

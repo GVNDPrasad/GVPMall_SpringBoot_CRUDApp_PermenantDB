@@ -1,0 +1,16 @@
+DAO(Data Access Object) Layer:
+
+/*
+ * DAO layer contains database logic & ORM logic
+ */
+
+@Repository: denoted by DAO class
+Ex: public interface CounterInterfaceDAO extends CrudRepository<TicketCountersDTO, Integer>{
+      
+    }
+
+CrudRepository<TicketCountersDTO/Bean Name, Integer/Primary Key>:
+It gives JPA ORM framework for Springboot.
+It is useful for CRUD operations.	
+No need to write code for CRUD operations automatically CRUD operations done using CrudRepository
+
