@@ -18,6 +18,7 @@ public class GvpMallCrudApplication implements CommandLineRunner{
 	
 	public static void main(String[] args) {
 		SpringApplication.run(GvpMallCrudApplication.class, args);
+		System.out.println("Every execution Starts from Boot class");
 		System.out.println("GVP Mall-Port No:8001");
 	}
 
